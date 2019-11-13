@@ -165,7 +165,7 @@ var tEditTask = tmpl("edit-task.html", `
 			</div>
 			<div class="form-row">
 				<label for="due_at">Due at</label>
-				<input required type="date" name="due_at" id="due_at" value="{{.Task.DueAt}}" />
+				<input required type="date" name="due_at" id="due_at" value="{{if .IsClassified}}{{.Task.DueAt}}{{end}}" />
 			</div>
 		</div>
 		{{if .Task.RecurrenceDays}}
