@@ -1,0 +1,71 @@
+@import 'fonts.scss';
+@import 'xy-lib.scss';
+@import 'xy-base.scss';
+@import 'xy-buttons.scss';
+@import 'xy-flashes.scss';
+@import 'xy-forms.scss';
+@import 'xy-nav.scss';
+@import 'xy-tables.scss';
+
+body > main {
+  @include is-styled;
+  @include is-stack(0.5rem);
+
+  & > .selected-task {
+    @include is-styled;
+    @include is-stack(0.5rem);
+
+    & > p {
+      @include is-styled;
+
+      &.task-description {
+        font-size: 1.5rem;
+        line-height: 1.3;
+        padding-left: 3rem;
+      }
+    }
+  }
+}
+
+body > footer {
+  @include is-styled;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.3;
+
+  & > p {
+    @include is-styled;
+    text-align: right;
+    margin: 0.25rem;
+    --link-color: blue;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.side-by-side {
+  @include is-column(0.5rem);
+
+  & > * {
+    flex: 1;
+  }
+}
+
+td.grow-column {
+  width: 100%;
+}
+td.nobr-column {
+  white-space: nowrap;
+}
+
+@media(min-width: 40.0001rem) {
+  td {
+    //fix alignment of text-only columns with text-and-button columns
+    line-height: var(--button-height);
+  }
+}

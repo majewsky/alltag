@@ -1,0 +1,30 @@
+# github.com/gorilla/context v1.1.1
+github.com/gorilla/context
+# github.com/gorilla/mux v1.6.2
+github.com/gorilla/mux
+# github.com/hashicorp/errwrap v1.0.0
+github.com/hashicorp/errwrap
+# github.com/hashicorp/go-multierror v1.0.0
+github.com/hashicorp/go-multierror
+# github.com/lib/pq v1.2.0
+github.com/lib/pq
+github.com/lib/pq/oid
+github.com/lib/pq/scram
+# github.com/majewsky/xyrillian.css v0.0.0-20191113145857-d07f6dae0faa
+github.com/majewsky/xyrillian.css
+# github.com/sapcc/go-bits v0.0.0-20190910095551-3863bd6b4943
+github.com/sapcc/go-bits/easypg
+github.com/sapcc/go-bits/easypg/migrate
+github.com/sapcc/go-bits/easypg/migrate/database
+github.com/sapcc/go-bits/easypg/migrate/database/postgres
+github.com/sapcc/go-bits/easypg/migrate/internal/url
+github.com/sapcc/go-bits/easypg/migrate/source
+github.com/sapcc/go-bits/easypg/migrate/source/go_bindata
+github.com/sapcc/go-bits/logg
+github.com/sapcc/go-bits/respondwith
+# gopkg.in/asn1-ber.v1 v1.0.0-20181015200546-f715ec2f112d
+gopkg.in/asn1-ber.v1
+# gopkg.in/gorp.v2 v2.0.0
+gopkg.in/gorp.v2
+# gopkg.in/ldap.v3 v3.0.3
+gopkg.in/ldap.v3
