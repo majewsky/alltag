@@ -123,3 +123,5 @@ Once everything is set up, connect to Alltag via HTTP (either directly or
 through a reverse proxy as suggested above). There is no separate login site.
 When your browser asks for credentials, enter the name and password for your
 user account in LDAP.
+
+[pq-uri]: https://www.postgresql.org/docs/9.6/static/libpq-connect.html#LIBPQ-CONNSTRING
