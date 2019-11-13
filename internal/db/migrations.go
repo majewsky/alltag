@@ -46,7 +46,7 @@ var sqlMigrations = map[string]string{
 			recurrence_days INT        NOT NULL DEFAULT 0,
 			-- timestamps
 			starts_at DATE NOT NULL DEFAULT NOW(),
-			due_at    DATE NOT NULL DEFAULT NOW(),
+			due_at    DATE NOT NULL DEFAULT NOW()
 		);
 
 		CREATE TABLE task_locations (
