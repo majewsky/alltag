@@ -8,18 +8,18 @@ all: build/$(CMD)
 # building/bundling CSS/JS artifacts
 
 hash-fonts: FORCE
-	./src/hash-artifacts.sh build/fonts-by-hash src/*.otf
+	bash ./src/hash-artifacts.sh build/fonts-by-hash src/*.otf
 build/fonts-by-hash/fonts.scss: hash-fonts
-	./src/render-font-css.sh > $@
+	sh ./src/render-font-css.sh > $@
 
 build/alltag.css: src/alltag.scss | build/fonts-by-hash/fonts.scss
 	sassc -t compressed -I vendor/github.com/majewsky/xyrillian.css -I build/fonts-by-hash $< $@
 
 hashed-artifacts: build/alltag.css src/alltag.js | src/hash-artifacts.sh hash-fonts FORCE
-	./src/hash-artifacts.sh build/by-hash $^ src/*.otf
+	bash ./src/hash-artifacts.sh build/by-hash $^ src/*.otf
 build/bindata/bindata.go: hashed-artifacts
 	@mkdir -p build/bindata
-	go-bindata -modtime 1 -prefix build/by-hash/ -o $@ build/by-hash/*
+	go-bindata -modtime 1 -pkg bindata -prefix build/by-hash/ -o $@ build/by-hash/*
 
 ################################################################################
 # compiling and installing the binary
